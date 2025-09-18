@@ -1,17 +1,24 @@
 #ifndef ANIMAL_H
 #define ANIMAL_H
+#include <string>
 
 class Animal {
- public:
-  Animal(string speciesName, unsigned int discoveryYear);
-  
-  Animal();
+public:
+  Animal(){}
+  Animal(std::string name, float weight, bool dangerous) {
+    this->name = name;
+    this->weight = weight;
+    this->dangerous = dangerous;
+  }
 
-  void display();
+  std::string get_name();
+  float get_weight();
+  bool is_dangerous();
 
- private:
-  string species = "";
-  unsigned int year_discovered = 0;
+private:
+  std::string name;
+  float weight;
+  bool dangerous;
 };
-  
+
 #endif

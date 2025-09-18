@@ -1,19 +1,15 @@
 #include <iostream>
-using namespace std;
 #include "Animal.h"
 
-Animal::Animal(string speciesName, unsigned int discoveryYear) {
-  species = speciesName;
-  year_discovered = discoveryYear;
+std::string Animal::get_name() {
+  return name;
 }
 
-       
-Animal::Animal() : species(""), year_discovered(0) {
+float Animal::get_weight() {
+  return weight;
 }
 
-void Animal::display(){
-  cout << species << " [" << year_discovered << "]" << endl;
+bool Animal::is_dangerous() {
+  return dangerous;
 }
 
-  
-      
